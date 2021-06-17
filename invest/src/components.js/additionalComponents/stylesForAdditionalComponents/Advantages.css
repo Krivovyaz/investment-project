@@ -1,0 +1,46 @@
+.header{
+    margin-bottom: 45px;
+}
+
+.header h3{
+    font-size: 36px;
+    font-weight: 700;
+    color: #3D4351;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element{
+    flex-basis: 400px;
+    text-align: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.elementTitle h3{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #282424;
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+
+.elementText {
+    box-sizing: border-box;
+}
+
+.elementText p{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #282424;
+    margin: 0 auto;
+    width: 90%;
+}

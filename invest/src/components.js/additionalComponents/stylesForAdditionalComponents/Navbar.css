@@ -1,0 +1,36 @@
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: start;
+    justify-content: center;
+  }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav-links:hover {
+    color: #35C4F2;
+    transition: all 0.3s;
+  }
+
+  .nav-links-mobile {
+    display: none;
+  }

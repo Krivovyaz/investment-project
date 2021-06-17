@@ -1,0 +1,32 @@
+.left-part-footer{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-left: 40px;
+}
+
+.footer-logo{
+    padding: 50px 30px 30px 30px;
+}
+
+.footer-logo img {
+    object-fit: cover;
+}
+
+.social-medias {
+    display: flex;
+    justify-content: space-between;
+    background-color: #054163;
+    padding-bottom: 25px;
+}
+
+/* .social-linck img {
+    margin: 10px;
+} */
+.footer-social-text {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #054163;
+    padding-bottom: 25px;
+}
