@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import logo from '../../photo/LogoFooter.svg'
+import logo from '../../photo/logo.svg'
 import skypeImg from '../../photo/skype.svg'
 import telegramImg from '../../photo/telegram.svg'
 import viberImg from '../../photo/viber.png'
@@ -162,5 +162,5 @@ export default Footer
 const Container = styled.div`
 display: flex;
 background-color: #054163;
-padding: 0 5%;
+padding: 0 5% 30px 5%;
 `

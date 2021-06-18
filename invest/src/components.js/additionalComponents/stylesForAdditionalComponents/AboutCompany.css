@@ -13,13 +13,12 @@
 
 .main-about {
     display: flex;
+    padding: 0 80px;
 }
 
 .information {
-    display: flex;
-    flex-basis: 39%;
-    flex-direction: column;
-    padding-left: 10%;
+    flex: 1 1 auto;
+    padding-right: 10%;
 }
 
 .information h4{
@@ -36,9 +35,11 @@
     line-height: 29px;
     font-weight: 300;
 }
-
+.photo{
+    flex: 0 0 600px;
+}
 .photo img{
-    width: 80%;
+    width: 100%;
     object-fit: cover;
 }
 

@@ -7,10 +7,13 @@
 
 .footer-logo{
     padding: 50px 30px 30px 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-logo img {
     object-fit: cover;
+    width: 155px;
 }
 
 .social-medias {
