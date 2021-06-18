@@ -35,10 +35,71 @@ function Footer() {
             title: "SERVICES",
             information: [
                 {
-                title: "Timeshare investment",
-
-            }
-        ]
+                    title: "Timeshare investment",
+                    path: "/"
+                },
+                {
+                    title: "Investment in finished real estate",
+                    path: "/"
+                },
+                {
+                    title: "Investent in real estate under construction",
+                    path: "/"
+                },
+                
+            ]
+        },
+        {
+            title: "CONTACTS",
+            information: [
+                {
+                    title: "Phone numbers:",
+                    path: "-"
+                },
+                {
+                    title: "+1234567890",
+                    path: "/"
+                },
+                {
+                    title: "+1234567890",
+                    path: "/"
+                },
+                {
+                    title: "E-mail adress",
+                    path: "-"
+                },
+                {
+                    title: "Estate:together@group.com",
+                    path: "-"
+                }
+                
+            ]
+        },
+        {
+            title: "LEGAL INFO",
+            information: [
+                {
+                    title: "User Terms",
+                    path: "/"
+                },
+                {
+                    title: "Privacy Policy",
+                    path: "/"
+                },
+                {
+                    title: "General Loan Terms",
+                    path: "/"
+                },
+                {
+                    title: "Cookie Policy",
+                    path: "/"
+                },
+                {
+                    title: "Investment Risk Station",
+                    path: "/"
+                },
+                
+            ]
         }
     ]
 
@@ -63,14 +124,34 @@ function Footer() {
                 <p className="footer-social-text">Estate Together, 2020, All rights are reserved.</p>
             </div>
             <div className="right-part-footer">
-                <div className="footer-nav">
-                </div>
-                <div className="footer-nav">
-                    
-                </div>
-                <div className="footer-nav">
-                    
-                </div>
+                {
+                    navInformation.map((item) => {
+                        return(
+                            <div className="footer-item">
+                                <ul>
+                                    <li><h5>{item.title}</h5></li>
+                                    {
+                                        item.information.map((link) => {
+                                            if(link.path === "-"){
+                                                return(
+                                                    <li>
+                                                        <h6>{link.title}</h6>
+                                                    </li>
+                                                )
+                                            } else {
+                                                return(
+                                                    <li>
+                                                        <Link to={link.path}>{link.title}</Link>
+                                                    </li>
+                                                )
+                                            }
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </Container>
     )
