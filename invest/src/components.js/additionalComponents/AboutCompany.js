@@ -2,29 +2,27 @@ import React from 'react'
 import styled from 'styled-components'
 import './stylesForAdditionalComponents/AboutCompany.css'
 import mainPhotoAbout from '../../photo/about-main.jpg'
-import numberImg1 from '../../photo/Group 22.svg'
-import numberImg2 from '../../photo/Group 24.svg'
-import numberImg3 from '../../photo/Group 26.svg'
+import HowDoesItWork from './HowDoesItWork'
 
 function AboutCompany() {
 
-    const instructions = [
-        {
-            img: numberImg1,
-            title: "Create your account",
-            description: "Once you create profile, view more detailed information about investment to explore the opportunities that fit your goals."
-        },
-        {
-            img: numberImg2,
-            title: "Speak with an expert",
-            description: "Talk with our expert team to choose the right strategy or to answer any questions you may have."
-        },
-        {
-            img: numberImg3,
-            title: "Get started Trading",
-            description: "When you’re ready to invest, you can quickly complete your transaction online.Take your investing to a new level!"
-        },
-    ]
+    // const instructions = [
+    //     {
+    //         img: numberImg1,
+    //         title: "Create your account",
+    //         description: "Once you create profile, view more detailed information about investment to explore the opportunities that fit your goals."
+    //     },
+    //     {
+    //         img: numberImg2,
+    //         title: "Speak with an expert",
+    //         description: "Talk with our expert team to choose the right strategy or to answer any questions you may have."
+    //     },
+    //     {
+    //         img: numberImg3,
+    //         title: "Get started Trading",
+    //         description: "When you’re ready to invest, you can quickly complete your transaction online.Take your investing to a new level!"
+    //     },
+    // ]
 
     return (
         <Container>
@@ -51,7 +49,7 @@ function AboutCompany() {
                     <img src={mainPhotoAbout}></img>
                 </div>
             </div>
-            <div className="instructions-about">
+            {/* <div className="instructions-about">
                 <div className="title">
                     <h3>How does It work?</h3>
                 </div>
@@ -72,7 +70,8 @@ function AboutCompany() {
                         })
                     }
                 </div>
-            </div>
+            </div> */}
+            <HowDoesItWork/>
         </Container>
     )
 }

@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function AuthorisationPage() {
+function AuthorisationPage({setShowFooter}) {
+    setShowFooter(true);
     return (
         <Container>
             

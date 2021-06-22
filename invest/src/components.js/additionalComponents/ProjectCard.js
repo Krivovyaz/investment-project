@@ -2,11 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import "./stylesForAdditionalComponents/ProjectCard.css"
 import ProgressBar from './ProgressBar';
+import {useHistory} from 'react-router-dom'
 import { Link } from 'react-router-dom';
 
 function ProjectCard({item}) {
 
-    console.log(item);
+    const history = useHistory();
+
+    const goToProduct = (id) => {
+        if(id) {
+            history.push(`/ProjectPage/${id}`)
+        }
+    }
 
     return (
         <Container>
@@ -40,9 +47,7 @@ function ProjectCard({item}) {
                         <span>{item.investors} investors,{item.filled}$ filled</span>
                         <span>€{item.left}left</span>
                     </div>
-                    <Link className="learnBtn" to="/Authorisation">
-                        <LearnBtn>Learn more</LearnBtn>
-                    </Link>
+                        <LearnBtn onClick={() => goToProduct(item.id)} >Learn more</LearnBtn>
                 </div>
             </div>
         </Container>
@@ -63,6 +68,9 @@ const LearnBtn = styled.div`
     outline: none;
     border-radius: 5px;
     margin-top: 30px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
     : hover{
         background-color: #35c4f2;
         transition-duration: 0.3s;

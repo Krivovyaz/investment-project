@@ -4,7 +4,20 @@ import { ProjectsInfo } from '../tempData/ProjectInfo'
 import ProjectCard from './ProjectCard'
 import './stylesForAdditionalComponents/Offers.css';
 
-function Offers({projectsTitle, amountOfProjects}) {
+function Offers({projectsTitle, amountOfProjects, searchCriteria}) {
+
+    let counterOfCheckedCards = 0,
+          counterOfShowedCards = 0;
+
+    const checkCriteris = (item, index) => {
+        counterOfCheckedCards++;
+        if( counterOfShowedCards < amountOfProjects && +item.loan <= +searchCriteria[0] && +item.month <= +searchCriteria[1]  && Math.ceil(item.roi) <= +searchCriteria[2]) {
+            counterOfShowedCards++;
+            return true;
+        } else {
+            return false;
+        }
+    }
     return (
         <Container>
             <div className="header">
@@ -12,14 +25,27 @@ function Offers({projectsTitle, amountOfProjects}) {
             </div>
             <div className="allCards">
                 {
-                    ProjectsInfo.map((item, index) => {
-                        if(index < amountOfProjects) {
-                            return(
-                                <ProjectCard item={item}/>
-                            )
-                        }
-                    })
-                }
+                    searchCriteria ? (
+                        ProjectsInfo.map((item, index) => {
+                            if(checkCriteris(item, index)) {
+                                console.log('yes');
+                                return(
+                                    <ProjectCard item={item}/>
+                                )
+                            }
+                        })):
+                        (
+                            ProjectsInfo.map((item, index) => {
+                                if(index < amountOfProjects) {
+                                    console.log('fuck');
+                                    return(
+                                        <ProjectCard item={item}/>
+                                    )
+                                }
+                            })
+                        )
+                };
+                
             </div>
         </Container>
     )
@@ -29,6 +55,6 @@ export default Offers
 
 const Container = styled.div`
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 120px auto 0 auto;
     text-align: center;
 `

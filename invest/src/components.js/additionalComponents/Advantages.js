@@ -57,7 +57,7 @@ function Advantages() {
 export default Advantages
 
 const Container = styled.div`
-    margin: 120px auto 120px auto;
+    margin: 120px auto 0 auto;
     padding: 0 110px;
     text-align: center;
 `

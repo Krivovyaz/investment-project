@@ -9,8 +9,10 @@ import whatsappImg from '../../photo/whatsapp.svg'
 import './stylesForAdditionalComponents/Footer.css';
 
 
-function Footer() {
+function Footer({showFooter}) {
 
+
+console.log(showFooter);
     const socialMedias = [
         {
             img: skypeImg,
@@ -36,15 +38,15 @@ function Footer() {
             information: [
                 {
                     title: "Timeshare investment",
-                    path: "/"
+                    path: "/TimeShare"
                 },
                 {
                     title: "Investment in finished real estate",
-                    path: "/"
+                    path: "/FinishedRealEstate"
                 },
                 {
                     title: "Investent in real estate under construction",
-                    path: "/"
+                    path: "/RealEstate"
                 },
                 
             ]
@@ -80,23 +82,23 @@ function Footer() {
             information: [
                 {
                     title: "User Terms",
-                    path: "/"
+                    path: "/404"
                 },
                 {
                     title: "Privacy Policy",
-                    path: "/"
+                    path: "/404"
                 },
                 {
                     title: "General Loan Terms",
-                    path: "/"
+                    path: "/404"
                 },
                 {
                     title: "Cookie Policy",
-                    path: "/"
+                    path: "/404"
                 },
                 {
                     title: "Investment Risk Station",
-                    path: "/"
+                    path: "/404"
                 },
                 
             ]

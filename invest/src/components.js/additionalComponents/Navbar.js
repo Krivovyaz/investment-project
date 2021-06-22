@@ -34,14 +34,14 @@ function Navbar({open, setOpen}) {
                         <Link to='/TimeShare' className="nav-links" onClick={closeMobileMenu}>Timeshare investment</Link> 
                     </li> 
                     <li className="nav-item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> 
-                        <Link to='/RealEstatePage' className="nav-links" 
+                        <Link to='/RealEstate' className="nav-links" 
                         > 
                             Real estate investment <i className='fas fa-caret-down'/> 
                         </Link> 
                         {dropdown && <DropMenuRealEstatement />} 
                     </li> 
                     <li className="nav-item" onClick={closeMobileMenu}> 
-                        <Link to='/Contacts' className="nav-links">Contacts</Link> 
+                        <Link to='/404' className="nav-links">Contacts</Link> 
                     </li> 
                     <li className="nav-item"> 
                         <Link to='/FAQ' className="nav-links" onClick={closeMobileMenu}>FAQ</Link> 

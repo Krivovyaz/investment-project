@@ -1,12 +1,12 @@
 export const MenuItems = [
     {
         title: 'Finished real estate',
-        path: '/RealEstatePage',
+        path: '/FinishedRealEstate',
         cName: 'dropdown-link'
     },
     {
         title: 'Real estate under construction',
-        path: '/RealEstatePage',
+        path: '/RealEstate',
         cName: 'dropdown-link'
     }
 ]

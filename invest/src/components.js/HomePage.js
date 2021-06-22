@@ -7,7 +7,9 @@ import Offers from './additionalComponents/Offers';
 import AdditionalInformation from './additionalComponents/AdditionalInformation';
 import AboutCompany from './additionalComponents/AboutCompany';
 
-function HomePage() {
+function HomePage({setShowFooter}) {
+
+    setShowFooter(true);
 
     const projectsTitle = "Latest Loans",
     amountOfProjects = 6;
@@ -66,7 +68,7 @@ const Information = styled.div`
     align-items: center;
     text-align: center;
     max-width: 700px;
-    margin: 0px auto;
+    margin: 100px auto 0 auto;
     color: #fff;
 
     a{
