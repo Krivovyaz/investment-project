@@ -1,0 +1,32 @@
+
+.description-project-page{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.location-project-page {
+    margin-top: 40px;
+}
+
+.location-text{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.location-google{
+    margin: 0 0 40px 140px;
+}
+
+.terms{
+    display: flex;
+    margin-top: 40px;
+}
+
+.terms-text ol {
+    padding-left: 70px;
+}
+
+.terms-text li{
+    padding: 20px 0 0 5px;
+}
+
